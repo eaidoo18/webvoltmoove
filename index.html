@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voltmoove – Find EV chargers across Ghana</title>
+<meta name="description" content="Voltmoove shows EV owners in Ghana which chargers are close, which are free, and which plug fits their car.">
+<meta name="theme-color" content="#06262B">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <a href="#top" class="brand" aria-label="Voltmoove home"><img src="assets/logo.png" alt="Voltmoove" width="674" height="120"></a>
+  <nav aria-label="Primary">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-sm" href="#get">Get the app</a>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <h1>Charge without circling the block.</h1>
+    <p class="lede">Voltmoove shows EV drivers in Ghana the nearest chargers, whether they’re free right now, and if the plug fits your car.</p>
+    <div class="cta-row">
+      <a class="btn" href="#get">Get early access</a>
+      <a class="link" href="#how">See how it works</a>
+    </div>
+    <p class="note">Free for drivers. Android and iOS.</p>
+  </div>
+
+  <div class="stage">
+    <div class="phone" role="group" aria-label="Interactive app preview">
+      <div class="screen">
+        <div class="chips" role="group" aria-label="Filter by plug">
+          <button class="chip on" data-f="all" aria-pressed="true">All</button>
+          <button class="chip" data-f="CCS2" aria-pressed="false">CCS2</button>
+          <button class="chip" data-f="Type 2" aria-pressed="false">Type 2</button>
+          <button class="chip" data-f="CHAdeMO" aria-pressed="false">CHAdeMO</button>
+        </div>
+        <svg class="map" viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="380" fill="var(--map)"/>
+          <path d="M0 300 C60 280 90 330 160 310 S260 330 300 300 V380 H0Z" fill="var(--sea)"/>
+          <g stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round">
+            <path d="M-10 120 L120 150 L310 90"/><path d="M110 -10 L130 150 L90 300"/><path d="M200 -10 L215 110 L300 200"/><path d="M-10 220 L130 190 L310 250"/>
+          </g>
+          <g stroke="#fff" stroke-width="4" fill="none" opacity=".8"><path d="M30 -10 L50 120"/><path d="M-10 60 L200 40"/><path d="M260 120 L240 300"/></g>
+          <circle cx="150" cy="215" r="7" fill="#2B7BFF" stroke="#fff" stroke-width="3"/>
+          <circle cx="150" cy="215" r="18" fill="#2B7BFF" opacity=".15"/>
+        </svg>
+        <div id="pins"></div>
+        <div class="sheet" id="sheet" aria-live="polite">
+          <div class="sheet-top"><strong id="s-name"></strong><span class="status" id="s-status"></span></div>
+          <p id="s-meta"></p>
+          <button class="btn btn-sm btn-block">Start navigation</button>
+        </div>
+      </div>
+    </div>
+    <p class="hint">Sample data. Tap a pin or a plug filter.</p>
+  </div>
+</section>
+
+<section class="sec how" id="how">
+  <h2>From “where?” to plugged in, in three taps</h2>
+  <ol class="steps">
+    <li><span>1</span><h3>Open the map</h3><p>Chargers near you show up straight away, sorted by distance.</p></li>
+    <li><span>2</span><h3>Pick a plug that fits</h3><p>Filter by CCS2, Type 2 or CHAdeMO. See speed and price before you drive there.</p></li>
+    <li><span>3</span><h3>Go</h3><p>Open turn-by-turn directions. Drivers report if a charger is busy or broken.</p></li>
+  </ol>
+</section>
+
+<section class="sec feats" id="features">
+  <h2>Built for how Ghana drives</h2>
+  <div class="feat-grid">
+    <article class="f f-big"><h3>Live availability</h3><p>See free, busy or offline before you leave. Drivers confirm status after every stop, so the map stays honest.</p></article>
+    <article class="f"><h3>Works on weak data</h3><p>Save your city for offline use. Maps and charger details still open between towns.</p></article>
+    <article class="f"><h3>Trip range check</h3><p>Enter your car and battery level. Voltmoove tells you which chargers you can reach.</p></article>
+    <article class="f"><h3>Pay in cedis</h3><p>Prices shown in GH₵ per kWh, with Mobile Money support where the operator offers it.</p></article>
+    <article class="f f-wide"><h3>Report a charger in seconds</h3><p>Found a new one, or a broken one? Add a photo and location. It reaches every driver nearby.</p></article>
+  </div>
+</section>
+
+<section class="sec cov" id="coverage">
+  <h2>Starting in the cities where EVs already are</h2>
+  <ul class="cities">
+    <li>Accra</li><li>Tema</li><li>Kumasi</li><li>Takoradi</li><li>Cape Coast</li><li>Tamale</li>
+  </ul>
+  <p class="sub">Know a charger we’re missing? Add it in the app and we’ll verify it.</p>
+</section>
+
+<section class="sec faq" id="faq">
+  <h2>Questions</h2>
+  <details><summary>Is Voltmoove free?</summary><p>Yes. Finding chargers is free for drivers. You only pay the charger operator for electricity.</p></details>
+  <details><summary>Which plugs are supported?</summary><p>CCS2, Type 2 and CHAdeMO, plus a filter for fast DC charging.</p></details>
+  <details><summary>Can I run a charging station?</summary><p>Yes. Station owners can list chargers, set prices and update status. Email us to get started.</p></details>
+</section>
+
+<section class="cta" id="get">
+  <h2>Be first to plug in with Voltmoove.</h2>
+  <form id="signup" novalidate>
+    <label for="email">Email address</label>
+    <div class="field">
+      <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <button class="btn btn-light" type="submit">Join the waitlist</button>
+    </div>
+    <p id="msg" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <img src="assets/logo.png" alt="Voltmoove" width="674" height="120">
+  <p>© <span id="yr">2026</span> Voltmoove. Made in Ghana.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
